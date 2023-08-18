@@ -35,7 +35,7 @@
     <?php
         echo "<h1 class='dtq'>Exemplos de dados de texto</h1> <br>";
 
-        echo "<br><p>Esse é um exemplo de texto</p><br>";
+        echo "<p>Esse é um exemplo de texto</p><br>";
     ?>
 
     <?php
