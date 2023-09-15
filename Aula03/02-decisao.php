@@ -139,6 +139,7 @@
 
             if($estoque<$estoquemin){
                 echo"<div class='repor'>É necessário repor estoque</div>";
+                echo"<mark>URGENTE</mark>"
             }
 
             else{
