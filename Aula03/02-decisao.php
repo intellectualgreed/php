@@ -69,9 +69,18 @@
         <li>Exibir a resposta da condicional simples com o comando echo no modo 1</li>
         <li>Exibir a resposta da condicional simples com o comando echo no modo 2</li>
     </ul>
+    <!-- Criar php -->
+        <?php
+            $a = 5;
 
-    <!-- Criar aqui seu programa PHP -->
-    
+            if($a>1){
+                echo "true<br>";
+            }
+            if($a>1)
+                echo "true<br>"
+
+        
+        ?>
     
     <hr>
     
@@ -121,7 +130,22 @@
     <hr>
 
     <!-- Criar aqui seu programa PHP -->
+        <?php
+            $produto = 'Ultrabook Asus';
+            $estoquemin = 14;
+            $estoque = 0;
 
+            echo "<h3> $produto</h3><br>";
+
+            if($estoque<$estoquemin){
+                echo"<div class='repor'>É necessário repor estoque</div>";
+            }
+
+            else{
+                echo"<div class='ok'>Estoque OK</div>";
+            }
+        
+        ?>
     
     <hr>
 
