@@ -139,7 +139,7 @@
 
             if($estoque<$estoquemin){
                 echo"<div class='repor'>É necessário repor estoque</div>";
-                echo"<mark>URGENTE</mark>"
+                echo"<mark>URGENTE</mark>";
             }
 
             else{
@@ -193,6 +193,26 @@
     <hr>
     
     <!-- Criar aqui seu programa PHP -->
+
+         <!-- <li>Esfiha</li>
+            <li>Pastel</li>
+            <li>Pizza</li>  -->
+
+        <?php
+            $opção=4;
+
+            if($opção ==1){
+                $opçãoEscolhida = "Pastel";
+                } elseif($opção ==2){
+                $opçãoEscolhida = "Pizza";
+                } elseif($opção ==3){
+                $opçãoEscolhida ="Esfiha";
+            } else{
+                $opçãoEscolhida = "Opção inválida";
+            }
+
+            echo "<p>$opçãoEscolhida</p>"
+        ?>
     
     <hr>
 
@@ -227,6 +247,16 @@
     <hr>
 
     <!-- Criar aqui seu programa PHP -->
+
+    <?php
+        switch($opção) {
+            case 1:$pedido = 'Pastel'; break;
+            case 2:$pedido = 'Pizza'; break;
+            case 3:$pedido = 'Esfiha'; break;
+            case 4:$pedido = 'Opção inválida'; break;
+        }
+        echo"<p>$pedido</p>"
+    ?>
     
     
     <!-- Rodapé -->
