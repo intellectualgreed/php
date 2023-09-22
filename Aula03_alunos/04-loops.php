@@ -14,8 +14,15 @@
     <h2 class="destaque">While (enquanto)</h2>
 
 
-    <!-- 1ª Digitação (Aqui) -->
-
+    <?php
+        $i =1;
+        while ($i <=5) {
+    ?>
+        <p><?=$i?></p>
+    <?php
+        $i ++;
+        }
+    ?>
 
 <hr>
 <!-- _______________________________________________________________________________ -->
@@ -23,8 +30,18 @@
     <h2 class="destaque">do/while (repita)</h2>
 
 
-<!-- 2ª Digitação (Aqui) -->
+    <?php
+        $j = 1;
+            do {
+    ?>
 
+    <div><h3>Olá!</h3></div>
+
+    <?php
+        $j++;
+
+        } while ($j <=3);
+    ?>
 
 <hr>
 <!-- _______________________________________________________________________________ -->
@@ -37,7 +54,9 @@
     //Controle; Condição; Atualização
 
     //  3ª Digitação (Aqui)
-
+        for($i =1; $i <=10; $i++){
+            echo $i. "";
+        }
  ?>
  <!-- _______________________________________________________________________________ -->
 
@@ -55,7 +74,15 @@
     <ol>
 
 
-        <!-- 4ª Digitação (Aqui) -->
+        <?php
+            for($nmeses=0; $nmeses <=11; $nmeses++){
+
+                ?>
+
+                <li><?=$meses[$nmeses]?></li>
+        <?php
+            }
+        ?>
 
 
     </ol>
@@ -67,9 +94,13 @@
 <ol>
 
 
-    <!-- 5ª Digitação (Aqui) -->
-    
-
+    <?php
+        foreach($meses as $mes){
+            ?>
+            <li><?=$mes?></li>
+            <?php    
+        }
+        ?>
 </ol>
 <!-- _______________________________________________________________________________ -->
 <hr>
@@ -83,9 +114,14 @@
 
     ];
 
-    //  6ª Digitação (Aqui) 
-
-?>
+    foreach($clubes as $clube => $apelido){
+        ?>
+        <p>
+            O <?=$clube?> é conhecido como: <?=$apelido?>
+        </p>
+    <?php
+    }
+    ?>
 <!-- _______________________________________________________________________________ -->
 <hr>
     <h2 class="destaque">Matriz (Associativa)</h2>
@@ -113,7 +149,8 @@ $alunos = [
     foreach($alunos as $aluno){
 ?>
 
-  <!-- 7ª Digitação (Aqui) -->
+        <p>Nome: <?=$aluno['nome']?></p>
+        <p>Idade: <?=$aluno['idade']?></p>
 
 <?php
     }

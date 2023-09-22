@@ -17,7 +17,12 @@
         <!-- Função Dados do autor -->
         <?php
 
-            // 1ª Digitação (Aqui)
+            function dadosAutor(){
+                echo "<div>";
+                echo "<p>Matia Binotto</p>";
+                echo "<p>Matia.binotto@ferrari.f1</p>";
+                echo "</div>";
+            }
 
         ?>
 
@@ -42,7 +47,8 @@
 
         ?>
     
-            <!-- 2ª Digitação (Aqui) -->
+            <p>Estamos no curso de <?=dadosCurso()?></p>
+            <p><?=dadosCurso()?> É ministrado no SENAI</p>
 
         <hr>
         
@@ -51,7 +57,10 @@
         <!-- Função Soma -->
         <?php
 
-            // 3ª Digitação (Aqui)
+            function soma ($valor1, $valor2, $valor3=0){
+                $total = $valor1 + $valor2 + $valor3;
+                return $total;
+            }
 
         ?>
     
@@ -102,7 +111,9 @@
 
         <?php
 
-            // 4ª Digitação (Aqui)
+            $formataPreco = function($valor){
+                return "R$" .number_format($valor,2,",",".");
+            }
 
         ?>
 
@@ -123,7 +134,10 @@
             // string: caracteres
 
 
-            // 5ª Digitação (Aqui)
+            function calculaMedia (float $n1, float $n2): float{
+                $media = ($n1 + $n2)/2;
+                return $media;
+            }
             
 
         ?>
