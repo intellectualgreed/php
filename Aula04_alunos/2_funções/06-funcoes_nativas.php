@@ -89,12 +89,15 @@ $arrayLinguagens = explode(" - ", $linguagens);
     <h2>Filtros</h2>
 <?php
 $email = "ignacio@gmail.com.br";
-$ataque = "<script> document.body.innerHTML = 'Sou ráqui!! hahahah >.<' </script>";
+$ataque = "<script> document.body.innerHTML = '<h1>Sou ráqui!! hahahah >.<</h1>' </script>";
 
 // echo $ataque;
 
 //  6ª Digitação (Aqui)
 
+$ataqueAnulado = filter_var($ataque, FILTER_SANITIZE_SPECIAL_CHARS);
+
+    echo $ataqueAnulado;
 ?>
 <p>
     <!-- <?=var_dump(filter_var($ataque))?> -->
@@ -138,6 +141,14 @@ $senhaSegura = password_hash($senha, PASSWORD_DEFAULT);
 <!-- Como checar se a senha é a correta -->
 
 <!-- 7ª Digitação (Aqui)  -->
-    
+    <?php
+        $i = "123ab";
+
+        if ($i === $senha){
+            echo "Senha correta";
+        }  else{
+            echo "Senha incorreta";
+        }
+    ?>
 </body>
 </html>
