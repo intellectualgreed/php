@@ -16,19 +16,24 @@
 // Trim(param) -> Remove espaços antes e depois de strings
 $nome = "Ignacio Cunha        ";
 $nomeSemEspaco = trim($nome);
+$nome2 = "      Victor        "
+
 ?>
 
 <!-- 1ª Digitação (Aqui) -->
+<pre> <?=var_dump($nome)?> </pre>
+<pre> <?=var_dump(trim($nome))?> </pre>
 
 <!-- ___________________________________________________________ -->
 <!-- Substitui um texto por outro-->
 <h3>str_replace</h3>
 <?php
 $fraseFeia = "<p>Fulano é um bobão e xarope</p>";
-
+// $fraseBonita = "<p>Fulano é um lindinho e maravilhoso</p>";
 
 //  2ª Digitação (Aqui)
 
+$fraseBonita = str_replace(['bobão','xarope'] ,['lindinho','maravilhoso'], $fraseFeia);
 
 echo $fraseFeia;
 echo $fraseBonita;
@@ -40,16 +45,22 @@ echo $fraseBonita;
 $linguagens = "HTML - CSS - JS";
 $arrayLinguagens = explode(" - ", $linguagens);
 
+    foreach($arrayLinguagens as $i){
+        echo $i . '<br>';
+    }
+
 ?>
-
-<!-- 3ª Digitação (Aqui) -->
-
+    
 <!-- ___________________________________________________________ -->
 <hr>
     <h2>Arrays</h2>
     <h3>implode()</h3>
 
 <!-- 4ª Digitação (Aqui) -->
+<?php
+    $bandas = ["Ghost", "Slipknot", "Nirvana"];
+    $stringBandas= implode("|", $bandas);
+?>
 
 <pre> <?=var_dump($bandas)?> </pre>
 <pre> <?=var_dump($stringBandas)?> </pre>
@@ -59,7 +70,14 @@ $arrayLinguagens = explode(" - ", $linguagens);
 
 <!-- 5ª Digitação (Aqui) -->
 
-<p> <?=$id?> </p>
+<?php
+    $infoPessoal = array("nome" => "Victor", "idade" => "16", "sexo" => "Masculino", "cidade" => "Santo André - SP");
+
+    extract ($infoPessoal)
+
+?>
+
+<p> <?=$nome?> </p>
 <p> <?=$idade?> </p>
 <p> <?=$sexo?> </p>
 <p> <?=$cidade?> </p>
@@ -78,7 +96,9 @@ $ataque = "<script> document.body.innerHTML = 'Sou ráqui!! hahahah >.<' </scrip
 //  6ª Digitação (Aqui)
 
 ?>
-
+<p>
+    <!-- <?=var_dump(filter_var($ataque))?> -->
+</p>
 
 <p>
     <?=var_dump(filter_var($email, FILTER_VALIDATE_EMAIL))?>
